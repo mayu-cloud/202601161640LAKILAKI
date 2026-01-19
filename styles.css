@@ -1265,13 +1265,31 @@ ul {
         gap: 24px;
     }
     
+    .timeline {
+        text-align: left;
+    }
+    
     .timeline-item {
         flex-direction: column;
         gap: 12px;
+        text-align: left;
     }
     
     .timeline-item::after {
         display: none;
+    }
+    
+    .timeline-time {
+        text-align: left;
+    }
+    
+    .timeline-content {
+        text-align: left;
+    }
+    
+    .timeline-title,
+    .timeline-text {
+        text-align: left;
     }
     
     .access-content {
