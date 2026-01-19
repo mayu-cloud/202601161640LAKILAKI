@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --muted: #737373;
+    --icon-color: #6b8f86;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -235,6 +240,11 @@ ul {
 .about-section {
     padding: 100px 0;
     background-color: #ffffff;
+    text-align: center;
+}
+
+.about-section > .container > .iconWrap {
+    margin: 0 auto 20px;
 }
 
 .about-grid {
@@ -250,13 +260,15 @@ ul {
     background-color: #fdfcfb;
     border-radius: 20px;
     border: 1px solid #f5f0eb;
+    text-align: center;
 }
 
 .about-icon {
-    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
     text-align: center;
-    margin-bottom: 24px;
-    color: #d4b5a0;
 }
 
 .about-heading {
@@ -282,6 +294,7 @@ ul {
     font-weight: 600;
     color: #5a5a5a;
     margin-bottom: 8px;
+    text-align: left;
     letter-spacing: 0.03em;
 }
 
@@ -289,7 +302,182 @@ ul {
     font-size: 14px;
     line-height: 2;
     color: #666;
+    text-align: left;
     letter-spacing: 0.02em;
+}
+
+/* =====================================
+   共通アイコンスタイル（統一ルール）
+   Icon system (unified)
+   ===================================== */
+
+/* セクション見出し用（円背景あり） */
+.iconWrap {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 12px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(47, 111, 99, .18);
+    background: rgba(217, 239, 232, .6);
+    color: var(--icon-color);
+}
+
+.iconWrap svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2; /* わかりやすさ重視 */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* カード内用（小さめ・背景なし） */
+.iconInline {
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    color: var(--icon-color);
+    display: grid;
+    place-items: center;
+}
+
+.iconInline svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* =====================================
+   就労支援B型事業所とは
+   ===================================== */
+.btype-section {
+    padding: 100px 0;
+    background-color: #f7f9f8;
+}
+
+/* B型セクション：アイコン＆文章を上品に */
+#btype .section__head {
+    text-align: center;
+}
+
+.btype-head {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.secIcon {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 10px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(47, 111, 99, .18);
+    background: rgba(217, 239, 232, .55);
+    color: rgba(47, 111, 99, .85);
+}
+
+.secIcon__svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btype-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #6b8f86; /* やさしいグリーン */
+    margin: 0 auto 12px;
+}
+
+.btype-icon-svg {
+    width: 24px;
+    height: 24px;
+    color: currentColor;
+}
+
+.btype-subtitle {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+    color: #4a4a4a;
+    margin-top: 24px;
+    letter-spacing: 0.03em;
+}
+
+.btype-subtitle strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.btypeCard {
+    max-width: 760px;
+    margin: 14px auto 0;
+    text-align: center;
+}
+
+.btype-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 48px 56px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.btypeText {
+    margin: 0 0 10px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.btype-text {
+    font-size: 15px;
+    line-height: 2.2;
+    color: #4a4a4a;
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+}
+
+.btype-text strong {
+    color: #7a9383;
+    font-weight: 600;
+}
+
+.btype-text-muted {
+    font-size: 14px;
+    line-height: 2;
+    color: #999;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+}
+
+.btype-btn {
+    display: inline-block;
+    background-color: #a8c4b0;
+    color: #ffffff;
+    padding: 16px 48px;
+    border-radius: 32px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btype-btn:hover {
+    background-color: #96b59e;
+    transform: translateY(-1px);
 }
 
 /* =====================================
@@ -298,6 +486,11 @@ ul {
 .work-section {
     padding: 100px 0;
     background-color: #ffffff;
+    text-align: center;
+}
+
+.work-section > .container > .iconWrap {
+    margin: 0 auto 20px;
 }
 
 .work-lead {
@@ -326,9 +519,11 @@ ul {
 }
 
 .work-icon {
-    font-size: 48px;
-    margin-bottom: 24px;
-    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    text-align: center;
 }
 
 .work-title {
@@ -337,6 +532,7 @@ ul {
     font-weight: 500;
     color: #2c3e50;
     margin-bottom: 24px;
+    text-align: center;
     letter-spacing: 0.08em;
 }
 
@@ -354,6 +550,11 @@ ul {
 .schedule-section {
     padding: 100px 0;
     background-color: #faf8f6;
+    text-align: center;
+}
+
+.schedule-section > .container > .iconWrap {
+    margin: 0 auto 8px;
 }
 
 .schedule-lead {
@@ -376,14 +577,17 @@ ul {
 
 .schedule-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 32px;
+    text-align: center;
 }
 
 .schedule-icon {
-    font-size: 28px;
-    opacity: 0.6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .schedule-heading {
@@ -435,14 +639,17 @@ ul {
 
 .wage-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 32px;
+    text-align: center;
 }
 
 .wage-icon {
-    font-size: 28px;
-    opacity: 0.6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wage-heading {
@@ -499,11 +706,17 @@ ul {
 .daily-section {
     padding: 100px 0;
     background-color: #fafcfb;
+    text-align: center;
+}
+
+.daily-section > .container > .iconWrap {
+    margin: 0 auto 20px;
 }
 
 .timeline {
     max-width: 680px;
     margin: 0 auto;
+    text-align: left;
 }
 
 .timeline-item {
@@ -530,6 +743,7 @@ ul {
     min-width: 76px;
     padding-top: 2px;
     letter-spacing: 0.02em;
+    text-align: left;
 }
 
 .timeline-content {
@@ -538,6 +752,7 @@ ul {
     padding: 24px 28px;
     border-radius: 16px;
     border: 1px solid #f0f0f0;
+    text-align: left;
 }
 
 .timeline-title {
@@ -634,11 +849,98 @@ ul {
 }
 
 /* =====================================
+   よくあるご質問（FAQ）
+   ===================================== */
+.faq-section {
+    padding: 100px 0;
+    background-color: #faf8f6;
+}
+
+.faq-cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.faq-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 32px 40px;
+    border: 1px solid #f0f0f0;
+    transition: box-shadow 0.2s ease;
+}
+
+.faq-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.faq-answer {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.faq-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.faq-question .faq-label {
+    background-color: #e8f0ec;
+    color: #6b8f86;
+}
+
+.faq-answer .faq-label {
+    background-color: #faf8f6;
+    color: #c9a98a;
+}
+
+.faq-text {
+    flex: 1;
+    font-size: 15px;
+    line-height: 2;
+    color: #4a4a4a;
+    letter-spacing: 0.02em;
+}
+
+.faq-text strong {
+    color: #6b8f86;
+    font-weight: 600;
+}
+
+/* =====================================
    アクセス
    ===================================== */
 .access-section {
     padding: 100px 0;
     background-color: #fafcfb;
+    text-align: center;
+}
+
+.access-section > .container > .iconWrap {
+    margin: 0 auto 20px;
 }
 
 .access-content {
@@ -677,21 +979,88 @@ ul {
     color: #666;
 }
 
-.map-placeholder {
+.map-container {
     background-color: #ffffff;
     border: 1px solid #f0f0f0;
     border-radius: 16px;
+    overflow: hidden;
     height: 100%;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    min-height: 400px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    display: block;
+}
+
+.map-guide {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.map-guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 2;
+    color: #4a4a4a;
+}
+
+.map-guide-list li {
+    position: relative;
+    padding-left: 18px;
+    text-align: left;
+}
+
+.map-guide-list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+    color: #6b8f86;
+    font-weight: 600;
+}
+
+/* ボタン（共通） */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #6b8f86;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(107, 143, 134, 0.15);
+}
+
+.btn:hover {
+    background-color: #5a7d75;
+    box-shadow: 0 4px 12px rgba(107, 143, 134, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(107, 143, 134, 0.2);
+}
+
+.btn-map {
+    padding: 12px 28px;
+    font-size: 14px;
 }
 
 .map-icon {
-    font-size: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .map-text {
@@ -821,6 +1190,64 @@ ul {
         gap: 32px;
     }
     
+    /* 共通アイコンのレスポンシブ対応 */
+    .iconWrap {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .iconWrap svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .iconInline {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .iconInline svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .btype-card,
+    .btypeCard {
+        padding: 36px 28px;
+    }
+    
+    .btype-text,
+    .btypeText,
+    .btype-text-muted {
+        font-size: 14px;
+    }
+    
+    .btype-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .btype-icon {
+        width: 24px;
+        height: 24px;
+        margin: 0 auto 10px;
+    }
+    
+    .btype-icon-svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .secIcon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .secIcon__svg {
+        width: 18px;
+        height: 18px;
+    }
+    
     .work-grid,
     .cafe-features,
     .cafe-gallery {
@@ -852,6 +1279,33 @@ ul {
         gap: 32px;
     }
     
+    .map-container {
+        min-height: 240px;
+    }
+    
+    .map-container iframe {
+        min-height: 240px;
+    }
+    
+    .map-guide-list {
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .map-guide-list li {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .map-guide-list li::before {
+        position: static;
+    }
+    
+    .btn-map {
+        padding: 11px 24px;
+        font-size: 13px;
+    }
+    
     .footer-content {
         flex-direction: column;
         gap: 32px;
@@ -863,5 +1317,20 @@ ul {
     
     .container {
         padding: 0 20px;
+    }
+    
+    .faq-card {
+        padding: 24px 28px;
+    }
+    
+    .faq-question,
+    .faq-text {
+        font-size: 14px;
+    }
+    
+    .faq-label {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
     }
 }
