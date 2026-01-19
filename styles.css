@@ -1669,9 +1669,9 @@ ul {
   padding: 14px 18px;
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,.12);
-  background: rgba(255,255,255,.92);
-  color: inherit;
-  box-shadow: 0 8px 24px rgba(0,0,0,.10);
+  background: #eaf3ef;
+  color: #2f4f46;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
@@ -1680,7 +1680,7 @@ ul {
 .fixed-cta:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0,0,0,.14);
-  background: rgba(255,255,255,.98);
+  background: #d9efe8;
 }
 
 .fixed-cta:focus-visible{
