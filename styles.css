@@ -1073,7 +1073,7 @@ ul {
    お申し込み
    ===================================== */
 .contact-section {
-    padding: 80px 0 100px;
+    padding: 80px 0 120px;
     background-color: #fdfcfb;
 }
 
@@ -1106,6 +1106,7 @@ ul {
     font-size: 13px;
     color: #c9a98a;
     letter-spacing: 0.02em;
+    margin-top: 20px;
 }
 
 /* =====================================
@@ -1151,6 +1152,90 @@ ul {
 .footer-bottom p {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* =====================================
+   気配レベルのインタラクション
+   ===================================== */
+
+/* ボタン：既存の動きを調整（0.3s → 0.18sに短縮） */
+.btn {
+    transition: all 0.18s ease-out;
+}
+
+.btn:hover {
+    background-color: #5a7d75;
+    box-shadow: 0 3px 10px rgba(107, 143, 134, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(107, 143, 134, 0.18);
+}
+
+.btn:focus-visible {
+    outline: 2px solid rgba(107, 143, 134, 0.4);
+    outline-offset: 2px;
+}
+
+/* カード：ごく薄い影とボーダー変化 */
+.work-card {
+    transition: border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.work-card:hover {
+    border-color: rgba(245, 240, 235, 0.8);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.about-column {
+    transition: border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.about-column:hover {
+    border-color: #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.timeline-content {
+    transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.timeline-content:hover {
+    border-color: #e8e8e8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ナビゲーションリンク：focus-visible追加 */
+.nav a:focus-visible {
+    outline: 2px solid rgba(122, 147, 131, 0.4);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.header-cta:focus-visible {
+    outline: 2px solid rgba(122, 147, 131, 0.4);
+    outline-offset: 2px;
+}
+
+/* アクセシビリティ：動きの軽減対応（必須） */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .btn:hover,
+    .work-card:hover,
+    .about-column:hover,
+    .timeline-content:hover {
+        transform: none;
+    }
 }
 
 /* =====================================
@@ -1322,6 +1407,8 @@ ul {
     .btn-map {
         padding: 11px 24px;
         font-size: 13px;
+        margin-bottom: 48px;
+        display: inline-block;
     }
     
     .footer-content {
@@ -1350,5 +1437,198 @@ ul {
         width: 28px;
         height: 28px;
         font-size: 13px;
+    }
+    
+    /* =====================================
+       SP余白調整（読みやすさ向上）
+       ===================================== */
+    
+    /* 1. セクション上下の余白を広げる */
+    .about-section,
+    .work-section,
+    .schedule-section,
+    .daily-section,
+    .cafe-section,
+    .faq-section {
+        padding: 72px 0;
+    }
+    
+    .access-section {
+        padding: 72px 0 100px;
+    }
+    
+    .message-section {
+        padding: 56px 0;
+    }
+    
+    /* 2. 見出し周りの余白を整理 */
+    .section-title {
+        margin-bottom: 20px;
+    }
+    
+    .section-lead {
+        margin-bottom: 40px;
+    }
+    
+    /* アイコンと見出しの間 */
+    .about-section > .container > .iconWrap,
+    .work-section > .container > .iconWrap,
+    .daily-section > .container > .iconWrap,
+    .cafe-section > .container > .iconWrap,
+    .access-section > .container > .iconWrap {
+        margin-bottom: 16px;
+    }
+    
+    .schedule-section > .container > .iconWrap {
+        margin-bottom: 12px;
+    }
+    
+    /* 3. カード・グリッド間の余白を広げる */
+    .about-grid {
+        gap: 40px;
+    }
+    
+    .work-grid {
+        gap: 32px;
+    }
+    
+    .cafe-features,
+    .cafe-gallery {
+        gap: 32px;
+    }
+    
+    /* 4. タイムライン項目間 */
+    .timeline-item {
+        margin-bottom: 32px;
+    }
+    
+    .timeline-content {
+        padding: 24px 24px 28px;
+    }
+    
+    /* 5. FAQ カード間 */
+    .faq-cards {
+        gap: 28px;
+    }
+    
+    .faq-card {
+        padding: 28px 24px 32px;
+    }
+    
+    .faq-question {
+        margin-bottom: 24px;
+    }
+    
+    /* 6. ボタン周りの余白 */
+    .btn,
+    .btn-map {
+        margin-top: 8px;
+        margin-bottom: 32px;
+    }
+    
+    .map-guide {
+        margin-top: 28px;
+        padding-bottom: 48px;
+    }
+    
+    .map-guide-list {
+        margin-bottom: 28px;
+    }
+    
+    /* 7. 地図・アクセス情報の余白 */
+    .access-content {
+        gap: 40px;
+    }
+    
+    .access-info {
+        margin-bottom: 16px;
+    }
+    
+    .access-transport {
+        margin-top: 24px;
+    }
+    
+    .access-map {
+        margin-bottom: 32px;
+    }
+    
+    .map-container {
+        margin-bottom: 12px;
+    }
+    
+    /* 8. テキストブロックの段落間 */
+    .about-item {
+        margin-bottom: 28px;
+    }
+    
+    .about-text,
+    .work-text {
+        margin-bottom: 12px;
+    }
+    
+    .timeline-text {
+        line-height: 2;
+    }
+    
+    /* 9. カード内の見出しとアイコン */
+    .about-icon,
+    .work-icon {
+        margin-bottom: 20px;
+    }
+    
+    .about-heading,
+    .work-title {
+        margin-bottom: 20px;
+    }
+    
+    /* 10. 勤務時間・工賃セクション */
+    .schedule-content,
+    .wage-content {
+        margin-top: 32px;
+    }
+    
+    .schedule-item,
+    .wage-item {
+        margin-bottom: 24px;
+    }
+    
+    /* 11. B型セクション */
+    .btype-card,
+    .btypeCard {
+        padding: 40px 28px;
+        margin-top: 32px;
+    }
+    
+    /* 12. メッセージセクション */
+    .message-text {
+        margin-bottom: 16px;
+    }
+    
+    /* 13. フッター */
+    .footer {
+        padding: 64px 0 40px;
+    }
+    
+    .footer-content {
+        margin-bottom: 56px;
+    }
+    
+    /* 14. お申し込みセクション（ボタンの重なり防止） */
+    .contact-section {
+        padding: 80px 0 80px;
+    }
+    
+    .contact-box {
+        padding: 0 20px;
+    }
+    
+    .contact-button {
+        padding: 16px 48px;
+        font-size: 15px;
+    }
+    
+    .contact-note {
+        margin-top: 16px;
+        padding: 0 20px;
     }
 }
