@@ -1763,3 +1763,22 @@ ul {
 }
 
 .trust-policy{ margin-top: 10px; opacity: .92; }
+
+/* =====================================
+   勤務時間セクション - 安心メッセージ
+   ===================================== */
+.schedule-reassurance {
+    font-size: 14px;
+    line-height: 2;
+    color: #999;
+    text-align: center;
+    margin: 24px 0 28px;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .schedule-reassurance {
+        font-size: 13px;
+        margin: 20px 0 24px;
+    }
+}
