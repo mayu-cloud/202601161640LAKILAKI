@@ -1782,3 +1782,448 @@ ul {
         margin: 20px 0 24px;
     }
 }
+
+/* =====================================
+   B型作業所ページ専用スタイル
+   ===================================== */
+
+/* ページヒーロー */
+.page-hero {
+    padding: 120px 0 80px;
+    background-color: #faf8f6;
+    text-align: center;
+}
+
+.page-title {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 16px;
+    letter-spacing: 0.08em;
+}
+
+.page-title-sub {
+    font-size: 20px;
+    color: #999;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.page-lead {
+    font-size: 15px;
+    line-height: 2;
+    color: #666;
+    letter-spacing: 0.03em;
+}
+
+/* 概要セクション */
+.btype-overview-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.btype-overview-section > .container > .iconWrap {
+    margin: 0 auto 20px;
+}
+
+.content-box {
+    max-width: 760px;
+    margin: 0 auto;
+    background-color: #fdfcfb;
+    border-radius: 20px;
+    padding: 48px 56px;
+    border: 1px solid #f5f0eb;
+    text-align: left;
+}
+
+.content-text {
+    font-size: 15px;
+    line-height: 2.2;
+    color: #4a4a4a;
+    margin-bottom: 28px;
+    letter-spacing: 0.02em;
+}
+
+.content-text:last-of-type {
+    margin-bottom: 0;
+}
+
+.content-text strong {
+    color: #7a9383;
+    font-weight: 600;
+}
+
+.content-text-note {
+    font-size: 13px;
+    line-height: 2;
+    color: #999;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+    letter-spacing: 0.02em;
+}
+
+/* こんな方にセクション */
+.btype-target-section {
+    padding: 100px 0;
+    background-color: #f7f9f8;
+    text-align: center;
+}
+
+.btype-target-section > .container > .iconWrap {
+    margin: 0 auto 20px;
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.target-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.target-card:hover {
+    border-color: #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.target-icon {
+    font-size: 24px;
+    color: #7a9383;
+    margin-bottom: 16px;
+}
+
+.target-text {
+    font-size: 14px;
+    line-height: 2;
+    color: #4a4a4a;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* 利用までの流れセクション */
+.btype-flow-section {
+    padding: 100px 0;
+    background-color: #fafcfb;
+    text-align: center;
+}
+
+.btype-flow-section > .container > .iconWrap {
+    margin: 0 auto 20px;
+}
+
+.flow-steps {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.flow-step {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.flow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 26px;
+    top: 60px;
+    width: 2px;
+    height: calc(100% - 12px);
+    background: linear-gradient(180deg, #e8f0ec 0%, transparent 100%);
+}
+
+.flow-number {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #e8f0ec;
+    color: #6b8f86;
+    font-size: 20px;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.02em;
+}
+
+.flow-content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 16px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.flow-title {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    letter-spacing: 0.08em;
+}
+
+.flow-text {
+    font-size: 14px;
+    line-height: 2;
+    color: #666;
+    letter-spacing: 0.02em;
+}
+
+/* CTAセクション */
+.cta-section {
+    padding: 80px 0;
+    background-color: #fdfcfb;
+}
+
+.cta-box {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 56px 48px;
+    border: 1px solid #f0f0f0;
+}
+
+.cta-title {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 24px;
+    letter-spacing: 0.08em;
+}
+
+.cta-text {
+    font-size: 15px;
+    line-height: 2.2;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #a8c4b0;
+    color: #ffffff;
+    padding: 18px 56px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.cta-button:hover {
+    background-color: #96b59e;
+    transform: translateY(-1px);
+}
+
+.cta-note {
+    font-size: 13px;
+    color: #c9a98a;
+    letter-spacing: 0.02em;
+    margin-top: 20px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .page-title {
+        font-size: 26px;
+    }
+    
+    .page-title-sub {
+        font-size: 16px;
+        display: block;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    
+    .page-lead {
+        font-size: 14px;
+    }
+    
+    .btype-overview-section,
+    .btype-target-section,
+    .btype-flow-section {
+        padding: 72px 0;
+    }
+    
+    .content-box {
+        padding: 36px 28px;
+    }
+    
+    .content-text {
+        font-size: 14px;
+    }
+    
+    .target-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .target-card {
+        padding: 24px 20px;
+    }
+    
+    .target-icon {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .target-text {
+        font-size: 13px;
+    }
+    
+    .flow-step {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .flow-step::after {
+        left: 25px;
+        top: 56px;
+    }
+    
+    .flow-number {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+    
+    .flow-content {
+        padding: 20px 24px;
+    }
+    
+    .flow-title {
+        font-size: 16px;
+    }
+    
+    .flow-text {
+        font-size: 13px;
+    }
+    
+    .cta-section {
+        padding: 64px 0;
+    }
+    
+    .cta-box {
+        padding: 40px 28px;
+    }
+    
+    .cta-title {
+        font-size: 20px;
+    }
+    
+    .cta-text {
+        font-size: 14px;
+    }
+    
+    .cta-button {
+        padding: 16px 48px;
+        font-size: 15px;
+    }
+}
+
+/* =====================================
+   LAKILAKI紹介セクション
+   ===================================== */
+.lakilaki-intro-section {
+    padding: 100px 0;
+    background-color: #f7f9f8;
+    text-align: center;
+}
+
+.lakilaki-intro-section > .container > .iconWrap {
+    margin: 0 auto 20px;
+}
+
+.lakilaki-box {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 48px 56px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.lakilaki-text {
+    font-size: 15px;
+    line-height: 2.2;
+    color: #4a4a4a;
+    margin-bottom: 28px;
+    letter-spacing: 0.02em;
+}
+
+.lakilaki-text:last-of-type {
+    margin-bottom: 0;
+}
+
+.lakilaki-link-wrap {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.lakilaki-link {
+    display: inline-block;
+    color: #6b8f86;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 12px 32px;
+    border: 1px solid #e8f0ec;
+    border-radius: 28px;
+    background-color: #fafcfb;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.lakilaki-link:hover {
+    background-color: #e8f0ec;
+    border-color: #d9efe8;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .lakilaki-intro-section {
+        padding: 72px 0;
+    }
+    
+    .lakilaki-box {
+        padding: 36px 28px;
+    }
+    
+    .lakilaki-text {
+        font-size: 14px;
+    }
+    
+    .lakilaki-link {
+        font-size: 14px;
+        padding: 11px 28px;
+    }
+}
