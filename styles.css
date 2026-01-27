@@ -770,6 +770,17 @@ ul {
     color: #666;
 }
 
+/* 1日の流れ - 補足文 */
+.daily-note {
+    max-width: 680px;
+    margin: 32px auto 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+    color: #999;
+    letter-spacing: 0.02em;
+}
+
 /* =====================================
    カフェセクション
    ===================================== */
@@ -1389,6 +1400,11 @@ ul {
     .timeline-title,
     .timeline-text {
         text-align: left;
+    }
+    
+    .daily-note {
+        font-size: 13px;
+        margin: 28px auto 0;
     }
     
     .access-content {
